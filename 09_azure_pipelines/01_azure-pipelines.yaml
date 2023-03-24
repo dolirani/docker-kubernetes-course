@@ -13,7 +13,7 @@ steps:
 - task: AzureCLI@2
   displayName: Docker Build & Push
   inputs:
-    azureSubscription: 'spn-team7'
+    azureSubscription: 'Free Trial (5b2038f5-a790-44ce-a8f0-0871707a4ca3)'
     scriptType: 'bash'
     scriptLocation: 'inlineScript'
     inlineScript: |
@@ -24,7 +24,7 @@ steps:
 - task: qetza.replacetokens.replacetokens-task.replacetokens@3
   displayName: 'Replace Image TAG'
   inputs:
-    rootDirectory: '02_kubernetes_aks'
+    rootDirectory: 'Cluster'
     targetFiles: 'app-deploy.yaml'
     encoding: 'auto'
     writeBOM: true
