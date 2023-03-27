@@ -6,7 +6,6 @@ pool:
 
 variables:
   acr_name: KubernetdemoNew
-
   tag: 1.0.0-$(Build.BuildId)
 
 steps:
@@ -25,7 +24,7 @@ steps:
 - task: qetza.replacetokens.replacetokens-task.replacetokens@3
   displayName: 'Replace Image TAG'
   inputs:
-    rootDirectory: '02_Kubernetes_aks'
+    rootDirectory: '02_kubernetes_aks'
     targetFiles: 'app-deploy.yaml'
     encoding: 'auto'
     writeBOM: true
@@ -51,4 +50,5 @@ steps:
     useConfigurationFile: true
     configuration: '02_kubernetes_aks'
     secretType: 'dockerRegistry'
-    containerRegistryType: 'KubernetdemoNew'
+    containerRegistryType: 'Azure Container Registry'
+
