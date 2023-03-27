@@ -5,7 +5,7 @@ pool:
   vmImage: ubuntu-latest
 
 variables:
-  acr_name: KubernetdemoNew
+  acr_name: Kubernetdemo221 
   tag: 1.0.0-$(Build.BuildId)
 
 steps:
@@ -43,8 +43,8 @@ steps:
   inputs:
     connectionType: 'Azure Resource Manager'
     azureSubscriptionEndpoint: 'Free Trial (5b2038f5-a790-44ce-a8f0-0871707a4ca3)'
-    azureResourceGroup: 'webappDBDemo-RG'
-    kubernetesCluster: 'ClusterDemo'
+    azureResourceGroup: 'Kubertes'
+    kubernetesCluster: 'clusterdemo123'
     namespace: 'default'
     command: 'apply'
     useConfigurationFile: true
